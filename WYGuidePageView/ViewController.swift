@@ -7,12 +7,25 @@
 //
 
 import UIKit
+// import WYGuidePageView
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // 首页背景图
+        let imageView = UIImageView.init(image: UIImage.init(named: "view_bg_image.png"))
+        imageView.frame = self.view.bounds
+        self.view.addSubview(imageView)
+        
+        let imageGifArray = ["guideImage5.jpg","adImage4.gif","guideImage7.gif","guideImage3.jpg", "shopping.gif"]
+        let guideView = WYGuidePageView.init(images: imageGifArray, loginRegistCompletion: {
+            print("登录/注册")
+        }) {
+            print("开始使用app")
+        }
+        self.view.addSubview(guideView)
     }
 
     override func didReceiveMemoryWarning() {
