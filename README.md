@@ -9,3 +9,4 @@
         }
         
         self.view.addSubview(guideView)
+![image] https://github.com/jieyiyou/WYGuidePageView/blob/master/Screen%20.png
